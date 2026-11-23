@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>تم تسجيل الدخول</title>
+<style>
+  body{font-family:-apple-system,"Segoe UI",Tahoma,sans-serif;background:#faf7f1;color:#0f172a;max-width:640px;margin:60px auto;padding:0 20px;line-height:1.7}
+  h1{font-size:26px} p{color:#475569}
+  textarea{width:100%;height:110px;direction:ltr;font-size:13px;padding:10px;border:1px solid #d6d0c4;border-radius:10px}
+  button{margin-top:12px;background:#0f172a;color:#fff;border:0;border-radius:10px;padding:12px 22px;font-size:16px;cursor:pointer}
+</style>
+</head>
+<body>
+<h1>تم تسجيل الدخول ✅</h1>
+<p>انسخ العنوان التالي والصقه في التيرمنال. لا ترسله لأي أحد.</p>
+<textarea id="u" readonly></textarea>
+<button id="c">نسخ العنوان</button>
+<p id="m"></p>
+<script>
+  // Nothing is sent anywhere: the page only shows its own address for copying.
+  var u=document.getElementById('u'); u.value=location.href;
+  document.getElementById('c').onclick=function(){u.select();navigator.clipboard.writeText(u.value).then(function(){document.getElementById('m').textContent='تم النسخ. ارجع إلى التيرمنال والصقه هناك.';});};
+</script>
+</body>
+</html>
